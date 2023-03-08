@@ -1,0 +1,18 @@
+
+<mat-sidenav-container class="">
+  <mat-sidenav #sidenav [mode]="'over'">
+    <mat-nav-list>
+      <mat-list-item *ngFor="let nav of fillerNav">
+        <div mat-line [routerLink]="nav.link">{{nav.text}}</div>
+        <mat-nav-list  *ngIf="nav.children && nav.children >0">
+          <a mat-list-item [routerLink]="item.link" *ngFor="let item of nav.children">{{item.text}}</a>
+        </mat-nav-list>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="fit-screen-h">
+    <sr-nav-bar (toggleSidenav)="sidenav.toggle()"></sr-nav-bar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -7,6 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
+import {MatLineModule} from "@angular/material/core";
 
 export const MATERIAL_MODULES = [
   MatSidenavModule,
@@ -18,4 +19,6 @@ export const MATERIAL_MODULES = [
   MatTooltipModule,
   MatSnackBarModule,
   MatButtonModule,
+  MatLineModule,
+
 ];
