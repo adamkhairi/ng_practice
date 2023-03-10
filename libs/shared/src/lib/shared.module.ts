@@ -1,14 +1,16 @@
-import { NgModule } from '@angular/core';
-import {CommonModule, NgForOf, NgSwitch} from '@angular/common';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { MATERIAL_MODULES } from './material.module';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NavBarComponent} from './components/nav-bar/nav-bar.component';
+import {MATERIAL_MODULES} from './material.module';
 import {LayoutComponent} from "./components/layout/layout.component";
 import {RouterLink, RouterOutlet} from "@angular/router";
+import {ReactiveFormsModule} from "@angular/forms";
 
-const DECLARATIONS_AND_EXPORTS = [NavBarComponent,LayoutComponent];
+const DECLARATIONS_AND_EXPORTS = [NavBarComponent, LayoutComponent];
 
 const IMPORTS_AND_EXPORTS = [
   CommonModule,
+  ReactiveFormsModule,
   ...MATERIAL_MODULES,
 ];
 
@@ -20,6 +22,7 @@ const IMPORTS_AND_EXPORTS = [
     RouterOutlet,
 
   ],
-  exports: [...DECLARATIONS_AND_EXPORTS,...IMPORTS_AND_EXPORTS]
+  exports: [...DECLARATIONS_AND_EXPORTS, ...IMPORTS_AND_EXPORTS]
 })
-export class SharedModule { }
+export class SharedModule {
+}

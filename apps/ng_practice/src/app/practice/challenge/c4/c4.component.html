@@ -1,0 +1,11 @@
+<p>c4 works!</p>
+<h2>Loading Example</h2>
+<div class="container flex flex-col gap-2">
+  <button (click)="load()" mat-raised-button color="primary" class="pb-5">Click</button>
+  <ng-container *ngIf="loadingPercent > 0">
+    <mat-progress-bar [value]="loadingPercent" ></mat-progress-bar>
+  </ng-container>
+  <ng-container *ngIf="loadingMessage">
+  <p>{{ loadingMessage }}</p>
+  </ng-container>
+</div>

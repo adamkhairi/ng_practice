@@ -1,0 +1,25 @@
+<p>c5 works!</p>
+<!--<div class="container flex flex-row gap-2">-->
+<!--  <div>{{ countdown$ | async }}</div>-->
+<!--  <button mat-raised-button (click)="startCountdown()">Start</button>-->
+<!--  <button mat-raised-button (click)="resetCountdown()">Reset</button>-->
+<!--</div>-->
+<!--<div class="container flex flex-row gap-2">-->
+<!--  <div>{{ countdown$ | async }}</div>-->
+<!--  <button (click)="restart()">Restart</button>-->
+<!--</div>-->
+
+<div class="container flex flex-col gap-2">
+  <ng-container *ngIf="countdown>=0 else showBtn">
+    <p>Countdown: {{countdown}}</p>
+
+  </ng-container>
+  <ng-template #showBtn>
+    <button
+      (click)="restartCountdown()"
+      mat-raised-button
+      color="primary"
+    >Restart Countdown
+    </button>
+  </ng-template>
+</div>
