@@ -1,0 +1,22 @@
+<p>c10 works!</p>
+<blockquote>
+  <p>
+    There is a color picker with a circle. Make an RxJS stream to allow user to
+    drag a circle inside palette and choose another color.
+  </p>
+
+  <p>
+    <strong>Additional task:</strong> show the HEX code of selected color under
+    palette
+  </p>
+</blockquote>
+
+<div class="color-picker" #palette>
+  <div class="circle" [style.left.%]="circleLeft" [style.top.%]="circleTop"
+       (mousedown)="onCircleMouseDown($event)"
+  ></div>
+</div>
+
+<div class="pt-5">
+  <p>{{colorMsg}}</p>
+</div>

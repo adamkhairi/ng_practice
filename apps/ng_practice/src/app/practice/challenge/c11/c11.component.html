@@ -1,0 +1,16 @@
+<p>c11 works!</p>
+<blockquote>
+  Make notification auto-close in 3 seconds, unless user hovers over it with a
+  cursor
+</blockquote>
+<div class="notifications">
+  <sr-notification *ngFor="let item of service | async" [observer]="item.observer">
+    {{item.content}}
+  </sr-notification>
+</div>
+<mat-form-field appearance="outline" >
+  <input matInput [(ngModel)]="text" />
+  <button mat-raised-button color="primary" (click)="show()">
+    Show
+  </button>
+</mat-form-field>

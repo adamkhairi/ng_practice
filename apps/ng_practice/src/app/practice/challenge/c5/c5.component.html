@@ -10,16 +10,15 @@
 <!--</div>-->
 
 <div class="container flex flex-col gap-2">
-  <ng-container *ngIf="countdown>=0 else showBtn">
+  <ng-container *ngIf="countdown>=0">
     <p>Countdown: {{countdown}}</p>
 
   </ng-container>
-  <ng-template #showBtn>
     <button
       (click)="restartCountdown()"
       mat-raised-button
       color="primary"
     >Restart Countdown
     </button>
-  </ng-template>
+
 </div>

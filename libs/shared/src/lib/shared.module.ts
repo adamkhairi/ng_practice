@@ -4,13 +4,14 @@ import {NavBarComponent} from './components/nav-bar/nav-bar.component';
 import {MATERIAL_MODULES} from './material.module';
 import {LayoutComponent} from "./components/layout/layout.component";
 import {RouterLink, RouterOutlet} from "@angular/router";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 const DECLARATIONS_AND_EXPORTS = [NavBarComponent, LayoutComponent];
 
 const IMPORTS_AND_EXPORTS = [
   CommonModule,
   ReactiveFormsModule,
+  FormsModule,
   ...MATERIAL_MODULES,
 ];
 

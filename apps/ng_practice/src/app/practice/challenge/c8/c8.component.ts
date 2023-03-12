@@ -57,7 +57,7 @@ export class C8Component {
   readonly control = new FormControl('');
 
   readonly items$ = this.control.valueChanges.pipe(
-    //smartSearch(requestBackendEmulation)
+   // smartSearch(requestBackendEmulation)
   );
 
   readonly filterValue = (item: string, value: string): boolean => item.startsWith(value);
